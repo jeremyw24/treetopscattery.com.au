@@ -12,28 +12,16 @@ import ServiceIconFour from "../icons/service4-icon.tsx"
 
 const services = [
 	{
-		title: 'Project Plan',
-		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+		title: 'Cats',
+		text: 'We cater for full families of cats with our range of spacious family apartments or Single Apartments for 1 Family Cats.'
 	},
 	{
-		title: 'Interior Work',
-		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+		title: 'Rabbits & Guinea Pigs',
+		text: 'A unique service offered by Treetops Cattery to cater for the smaller members of the family...'
 	},
 	{
-		title: 'Realization',
-		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
-	},
-	{
-		title: '2d/3d Art Work',
-		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
-	},
-	{
-		title: 'Retail design',
-		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
-	},
-	{
-		title: 'Decoration Work',
-		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+		title: 'Pet Taxi',
+		text: 'Unable to drive or had to leave in a rush? We offer a complete Pet Taxi service. Including pickup and drop-off.'
 	},
 ]
 
@@ -92,7 +80,7 @@ const howWeWorkDetails = [
 			services.map((service) => {
 				return (
 					<div class="w-full col-span-1 max-w-[358px] mx-auto flex rounded-[30px] hover:bg-primary-300 px-5 py-[83px] flex-col justify-center items-center gap-3 md:gap-5">
-						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose text-center">{service.title}</h3>
 						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
 						
 					</div>
