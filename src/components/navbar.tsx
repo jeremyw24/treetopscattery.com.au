@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [toggled, setToggled] = useState(false);
-  const matches = useMediaQuery("(min-width: 1280px)");
+  const matches = useMediaQuery("(min-width: 1200px)");
 
   const linkStyle = "text-xl leading-6 font-jost text-primary-200";
 
@@ -34,6 +34,7 @@ const Navbar = () => {
         </nav>
       )}
 
+      {/* Burger Menu for Mobile */}
       {!matches && (
         <div
           onClick={() => setToggled(!toggled)}
@@ -58,6 +59,7 @@ const Navbar = () => {
         </div>
       )}
 
+      {/* Mobile Menu Dropdown */}
       {toggled && !matches && (
         <motion.nav
           initial={{ opacity: 0, x: 25 }}

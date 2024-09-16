@@ -105,7 +105,7 @@ const experiences = [
 
 	<!-- Banner -->
 	
-	<section class="w-full bg-hero bg-no-repeat bg-cover h-screen lg:min-h-[110vh] px-12 xl:px-0 flex items-center ">
+	<section class="w-full bg-hero bg-no-repeat bg-cover bg-center h-screen lg:min-h-[110vh] px-12 xl:px-0 flex items-center ">
 		<div class="lg:max-w-[1200px] w-full mx-auto flex flex-col">
 			<h1 class="text-[40px] leading-[50px] md:text-[60px] xl:text-[85px] pb-4 font-dm md:leading-[106.25px] w-full xl:max-w-[50%] text-gray-800">A home away from home... </h1>
 			<p class="text-base md:text-[22px] pb-5 font-jost text-text-gray-600 w-full lg:max-w-[50%]">Treetops Cattery Offers All The Luxuries of Home with our unique Warm, Loving Home-Style Care & dedicated service.</p>
@@ -120,7 +120,7 @@ const experiences = [
 			services.map((service) => {
 				return (
 					<div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
-						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose text-center">{service.title}</h3>
 						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
 						<a href="/services" class="text-text-gray-200 leading-snug text-lg tracking-tight font-jost font-semibold gap-2 py-4 md:py-8 startCenter">Read More <ArrowSec /></a>
 					</div>
