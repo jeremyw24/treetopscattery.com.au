@@ -29,40 +29,40 @@ const howWeWorkDetails = [
   {
     imgIcon: ServiceIconOne,
     numIcon: One,
-    img: '/service1.png',
-    title: 'Concept & Details',
-    info:'It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.'
+    img: '/cat-bed.png',
+    title: 'Cozy Accomodation',
+    info:'Does your cat love lounging in-front of the fire place, or prefer to adventure outside? We have a range of accomodation options to suit your cats preferred lifestyle.'
 
   },
   {
     imgIcon: ServiceIconTwo,
     numIcon: Two,
-    img: '/service2.png',
-    title: 'Idea For Work',
-    info:'It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.'
+    img: '/cat-eating.png',
+    title: 'Tailored Diets',
+    info:'Does your cat require specific food or a regimented feeding schedule? Our trained and experienced staff will ensure your pets get all meals and dietry requirements.'
 
   },
   {
     imgIcon: ServiceIconThree,
     numIcon: Three,
-    img: '/service3.png',
-    title: 'Design',
-    info:'It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.'
+    img: '/cat-toy.png',
+    title: 'Memories of Home',
+    info:'We aim to make your cats stay as homely as possible, bring along their favourite bedding, blankets or toys to decorate their apartment. This also helps reduce anxiety and stress on your cat.'
 
   },
   {
     imgIcon: ServiceIconFour,
     numIcon: Four,
-    img: '/service4.png',
-    title: 'Perfection',
-    info:'It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry.'
+    img: '/cat-grooming.png',
+    title: 'Unique Requirements',
+    info:'Wether it be daily grooming, or a regimented medication schedule for your cats, Treetops has you covered. Our trained and experienced staff will ensure your pets get the best care possible.'
 
   },
 ]
 ---
 
 
-<MainLayout title = 'Interior Design Services'>
+<MainLayout title = 'Our Services'>
 
   <!-- Banner Section -->
 
@@ -92,8 +92,8 @@ const howWeWorkDetails = [
   <!-- How We Work Section -->
   <section class="px-12 xl:px-0 w-full mt-[100px] lg:mt-[200px] min-h-screen ">
    <div class="w-full lg:max-w-[1200px] p-12 mx-auto lg:px-[116px] lg:py-[160px] bg-primary-300 rounded-[70px] ">
-     <h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full capitalize lg:max-w-[50%] pb-2 mx-auto">How We Work</h2>
-		<p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[60%] mx-auto">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
+     <h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full capitalize lg:max-w-[50%] pb-2 mx-auto">What we offer</h2>
+		<p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[60%] mx-auto">Treetops Boarding Cattery offer a range of services tailored to give you and your pets the best experience. From our primary service, Cat Boarding through to Rabbit & Guinea Pig boarding.</p>
 
     <div class="pt-[70px] lg:pt-[100px] flex flex-col gap-[70px] ">
       <!-- Inner Sections -->
@@ -109,7 +109,7 @@ const howWeWorkDetails = [
               <img src={detail.img} alt=""/>
               <div class="flex flex-col gap-12 lg:gap-[58px]">
                 <div class="justify-between hidden lg:flex">
-                  <ImageIcon />
+                  {/* <ImageIcon /> */}
                   <NumberIcon/>
                 </div>
                 <div class="flex flex-col gap-3">
