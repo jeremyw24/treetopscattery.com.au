@@ -4,7 +4,7 @@ import Button from "./button.tsx";
 const ContactForm = () => {
   return (
     <div className="col-span-1 lg:col-span-2">
-      <form className="w-full grid grid-cols-2 gap-x-10 gap-y-[50px]" action="https://submit-form.com/rMnhtyF7Q">
+      <form className="w-full grid grid-cols-2 gap-x-10 gap-y-[50px]" action="https://submit-form.com/rMnhtyF7Q" data-botpoison-public-key="pk_23c283b4-3034-48f0-bc86-1206b236df71">
         <label htmlFor="name">
           <input
             type="text"
@@ -23,35 +23,35 @@ const ContactForm = () => {
             required
           />
         </label>
-        <div className="space-y-4">
-          {/* Phone Input */}
-          <label htmlFor="phone" className="block">
-            <input
-              type="number"
-              name="phone"
-              className="border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"
-              placeholder="Phone (required)"
-              required
-            />
+        {/* Phone Input */}
+        <label htmlFor="phone" className="block">
+          <input
+            type="number"
+            name="phone"
+            className="col-span-1 border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"
+            placeholder="Phone (required)"
+            required
+          />
+        </label>
+
+        {/* Select Options (side by side, full width) */}
+        <div className="col-span-1 lg:col-span-2">
+          <label htmlFor="pet-type" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
+            Select your pet type:
+            <select
+              name="pet-type"
+              id="pet-type"
+              className="col-span-1 border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
+            >
+              <option value="" disabled selected>Please Select Pet Type</option>
+              <option value="cat">Cat</option>
+              <option value="guineapig">Guinea Pig</option>
+              <option value="rabbit">Rabbit</option>
+              <option value="multiple">Multiple Pets</option>
+            </select>
           </label>
 
-          {/* Select Options (side by side, full width) */}
-          <div className="grid grid-cols-1 gap-4">
-            <label htmlFor="pet-type" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
-              Select your pet type:
-              <select
-                name="pet-type"
-                id="pet-type"
-                className="border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
-              >
-                <option value="" disabled selected>Please Select Pet Type</option>
-                <option value="cat">Cat</option>
-                <option value="guineapig">Guinea Pig</option>
-                <option value="rabbit">Rabbit</option>
-                <option value="multiple">Multiple Pets</option>
-              </select>
-            </label>
-
+          <div className="mt-4">
             <label htmlFor="accomodation-type" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
               Accomodation preference:
               <select
@@ -66,6 +66,9 @@ const ContactForm = () => {
                 <option value="any">Any</option>
               </select>
             </label>
+          </div>
+
+          <div className="mt-4">
             <label htmlFor="vaccination" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
               Current F3 Vaccination & Certificate?
               <select
@@ -81,8 +84,7 @@ const ContactForm = () => {
             </label>
           </div>
 
-          {/* Date Inputs (side by side, full width) */}
-          <div className="grid grid-cols-1 gap-4">
+          <div className="mt-4">
             <label htmlFor="drop-off" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
               Drop Off Date:
               <input
@@ -93,30 +95,33 @@ const ContactForm = () => {
                 className="border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
               />
             </label>
-
-            <label htmlFor="pick-up" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
-              Pick Up Date:
-              <input
-                type="date"
-                id="pick-up"
-                name="pick-up"
-                placeholder="Pick Up Date"
-                className="border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
-              />
-            </label>
-            <label htmlFor="pet-taxi" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
-              Pet Taxi Service
-              <select
-                name="pet-taxi"
-                id="pet-taxi"
-                className="border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
-              >
-                <option value="" disabled selected>Do you require a Pet Taxi?</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-                <option value="unsure">Unsure</option>
-              </select>
-            </label>
+          </div>
+          <div className="mt-4">
+          <label htmlFor="pick-up" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
+            Pick Up Date:
+            <input
+              type="date"
+              id="pick-up"
+              name="pick-up"
+              placeholder="Pick Up Date"
+              className="border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
+            />
+          </label>
+          </div>
+          <div className="mt-4">
+          <label htmlFor="pet-taxi" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
+            Pet Taxi Service
+            <select
+              name="pet-taxi"
+              id="pet-taxi"
+              className="border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
+            >
+              <option value="" disabled selected>Do you require a Pet Taxi?</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="unsure">Unsure</option>
+            </select>
+          </label>
           </div>
         </div>
         <textarea
