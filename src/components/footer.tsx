@@ -47,7 +47,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col gap-2">
+        {/* <div className="col-span-1 flex flex-col gap-2">
           <h5 className="text-primary-200 font-dm text-[18px] lg:text-[18px] leading-loose">
             Services
           </h5>
@@ -65,7 +65,7 @@ const Footer = () => {
               Pet Taxi
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="col-span-1 flex flex-col gap-4">
           <h5 className="text-primary-200 font-dm text-[22px] lg:text-[25px] leading-loose">
             Contact
