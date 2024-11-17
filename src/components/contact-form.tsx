@@ -33,23 +33,18 @@ const ContactForm = () => {
             required
           />
         </label>
+        <label htmlFor="cat-name" className="block">
+        <input
+            type="text"
+            name="cat-name"
+            className="col-span-1 border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"
+            placeholder="Your cats name"
+            required
+          />
+        </label>
 
         {/* Select Options (side by side, full width) */}
         <div className="col-span-1 lg:col-span-2">
-          <label htmlFor="pet-type" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
-            Select your pet type:
-            <select
-              name="pet-type"
-              id="pet-type"
-              className="col-span-1 border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
-            >
-              <option value="" disabled selected>Please Select Pet Type</option>
-              <option value="cat">Cat</option>
-              <option value="guineapig">Guinea Pig</option>
-              <option value="rabbit">Rabbit</option>
-              <option value="multiple">Multiple Pets</option>
-            </select>
-          </label>
 
           <div className="mt-4">
             <label htmlFor="accomodation-type" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
@@ -106,21 +101,6 @@ const ContactForm = () => {
               placeholder="Pick Up Date"
               className="border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
             />
-          </label>
-          </div>
-          <div className="mt-4">
-          <label htmlFor="pet-taxi" className="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray">
-            Pet Taxi Service
-            <select
-              name="pet-taxi"
-              id="pet-taxi"
-              className="border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray mt-2"
-            >
-              <option value="" disabled selected>Do you require a Pet Taxi?</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-              <option value="unsure">Unsure</option>
-            </select>
           </label>
           </div>
         </div>
