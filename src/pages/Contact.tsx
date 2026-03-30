@@ -82,7 +82,7 @@ export default function Contact() {
                     <span className="font-bold">9:00 AM - 5:00 PM</span>
                   </li>
                   <li className="flex justify-between border-b border-cream/10 pb-2">
-                    <span>Saturday</span>
+                    <span>Wednesday & Saturday</span>
                     <span className="font-bold">9:00 AM - 12:00 PM</span>
                   </li>
                   <li className="flex justify-between">
@@ -99,7 +99,7 @@ export default function Contact() {
             {/* Booking Form */}
             <div className="bg-white p-10 md:p-16 rounded-[3rem] shadow-sm border border-sage/10">
               {submitted ? (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-20"
@@ -111,7 +111,7 @@ export default function Contact() {
                   <p className="text-forest/60 text-lg mb-8">
                     Your message has been sent successfully. We'll get back to you as soon as possible to confirm your booking.
                   </p>
-                  <button 
+                  <button
                     onClick={() => setSubmitted(false)}
                     className="text-sage font-bold hover:underline"
                   >
@@ -121,22 +121,22 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <h2 className="text-3xl font-serif font-bold text-forest mb-8">Booking Inquiry</h2>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">Your Name</label>
-                      <input 
+                      <input
                         required
-                        type="text" 
+                        type="text"
                         placeholder="John Doe"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">Email Address</label>
-                      <input 
+                      <input
                         required
-                        type="email" 
+                        type="email"
                         placeholder="john@example.com"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
@@ -146,18 +146,18 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">Phone Number</label>
-                      <input 
+                      <input
                         required
-                        type="tel" 
+                        type="tel"
                         placeholder="(03) 1234 5678"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">Cat's Name</label>
-                      <input 
+                      <input
                         required
-                        type="text" 
+                        type="text"
                         placeholder="Whiskers"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
@@ -167,17 +167,17 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">Check-in Date</label>
-                      <input 
+                      <input
                         required
-                        type="date" 
+                        type="date"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">Check-out Date</label>
-                      <input 
+                      <input
                         required
-                        type="date" 
+                        type="date"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
                     </div>
@@ -185,14 +185,14 @@ export default function Contact() {
 
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">Message / Special Requirements</label>
-                    <textarea 
+                    <textarea
                       rows={4}
                       placeholder="Tell us about your cat's needs..."
                       className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all resize-none"
                     ></textarea>
                   </div>
 
-                  <button 
+                  <button
                     type="submit"
                     className="w-full bg-forest text-cream py-5 rounded-2xl font-bold text-lg hover:bg-sage transition-all shadow-lg flex items-center justify-center gap-2"
                   >
