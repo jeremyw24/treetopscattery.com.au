@@ -7,9 +7,9 @@ const Hero = () => {
     <section className="relative h-[85vh] flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=2000" 
-          alt="Cozy Cat" 
+        <img
+          src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=2000"
+          alt="Cozy Cat"
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-cream">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -33,14 +33,14 @@ const Hero = () => {
             Treetops Cattery offers all the luxuries of home with our unique warm, loving home-style care and dedicated service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-cream text-forest px-8 py-4 rounded-full font-bold hover:bg-sage hover:text-cream transition-all flex items-center justify-center gap-2 shadow-lg"
             >
               Book a Stay <ArrowRight size={20} />
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="bg-transparent border-2 border-cream/50 text-cream px-8 py-4 rounded-full font-bold hover:bg-cream/10 transition-all flex items-center justify-center"
             >
               Learn More
@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      
+
       {/* Decorative Paw Prints */}
       <div className="absolute bottom-10 right-10 opacity-20 text-cream hidden lg:block">
         <PawPrint size={120} className="rotate-12" />
@@ -85,10 +85,10 @@ const Features = () => {
             We've been providing exceptional boarding services for over 45 years, focusing on the individual needs of every feline guest.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {features.map((feature, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -116,9 +116,9 @@ const ServicesPreview = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2">
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1513245539768-586217995117?auto=format&fit=crop&q=80&w=1000" 
-                alt="Cat in Apartment" 
+              <img
+                src="https://images.unsplash.com/photo-1552954877-e96a0f0728c0?auto=format&fit=crop&q=80&w=1000"
+                alt="Cat in Apartment"
                 className="rounded-3xl shadow-2xl relative z-10"
                 referrerPolicy="no-referrer"
               />
@@ -147,8 +147,8 @@ const ServicesPreview = () => {
                 </li>
               ))}
             </ul>
-            <Link 
-              to="/services" 
+            <Link
+              to="/services"
               className="inline-flex items-center gap-2 text-sage font-bold hover:gap-4 transition-all"
             >
               View All Services <ArrowRight size={20} />
@@ -210,8 +210,8 @@ const CTA = () => {
           <p className="text-cream/80 text-lg mb-12 max-w-2xl mx-auto relative z-10">
             Contact us today to check availability and discuss your cat's specific needs. We look forward to welcoming them!
           </p>
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="inline-block bg-sage text-cream px-10 py-5 rounded-full font-bold text-lg hover:bg-cream hover:text-forest transition-all shadow-lg relative z-10"
           >
             Get in Touch
