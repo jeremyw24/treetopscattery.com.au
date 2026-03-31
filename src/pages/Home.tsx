@@ -67,7 +67,7 @@ const Features = () => {
     {
       icon: <Shield className="text-sage" />,
       title: "Safe & Secure",
-      description: "Our facilities are designed for maximum security and comfort, giving you peace of mind."
+      description: "Our facilities are designed for comfort and are fully licenced and approved by council, giving you peace of mind."
     },
     {
       icon: <Star className="text-moss" />,

@@ -32,9 +32,12 @@ export default function About() {
                 Treetops Boarding Cattery was established in 1976 as a family owned and run business, and still continues this tradition today along with professional, friendly and unique service.
               </p>
               <p className="text-forest/70 text-lg leading-relaxed">
+                Our Cattery is situated on 10 acres of beautiful, untouched farm-land in the heart of the Mornington Peninsula.
+              </p>
+              <p className="text-forest/70 text-lg leading-relaxed">
                 Over the decades, we've grown from a small facility into one of the most respected catteries in Victoria, all while maintaining the personal touch that only a family business can provide.
               </p>
-              
+
               <div className="pt-8 grid grid-cols-2 gap-8">
                 <div>
                   <div className="text-4xl font-serif font-bold text-sage mb-2">45+</div>
@@ -47,9 +50,9 @@ export default function About() {
               </div>
             </div>
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&q=80&w=1000" 
-                alt="Cattery Surroundings" 
+              <img
+                src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&q=80&w=1000"
+                alt="Cattery Surroundings"
                 className="rounded-[3rem] shadow-2xl"
                 referrerPolicy="no-referrer"
               />
@@ -88,7 +91,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-forest mb-6">Meet Our Team</h2>
@@ -96,7 +99,7 @@ export default function About() {
               Our staff are trained professionals and, most importantly, genuine cat lovers who dedicated their lives to feline welfare.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               { name: "The Williams Family", role: "Owners & Founders", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=600" },
@@ -105,9 +108,9 @@ export default function About() {
             ].map((member, i) => (
               <div key={i} className="group">
                 <div className="relative overflow-hidden rounded-[2rem] aspect-[4/5] mb-6">
-                  <img 
-                    src={member.img} 
-                    alt={member.name} 
+                  <img
+                    src={member.img}
+                    alt={member.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
@@ -119,7 +122,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </motion.div>
   );
 }

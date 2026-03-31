@@ -31,7 +31,7 @@ const Navbar = () => {
               <div className="w-10 h-10 bg-sage rounded-full flex items-center justify-center text-cream group-hover:scale-110 transition-transform">
                 <Cat size={24} />
               </div>
-              <span className="text-2xl font-serif font-bold text-forest tracking-tight">Treetops <span className="text-sage">Cattery</span></span>
+              <span className="text-2xl font-serif font-bold text-forest tracking-tight">Treetops <span className="text-sage">Boarding Cattery</span></span>
             </Link>
           </div>
 
@@ -164,16 +164,16 @@ const Footer = () => {
             <h4 className="text-lg font-serif font-bold mb-6">Opening Hours</h4>
             <ul className="space-y-3 text-sm text-cream/70">
               <li className="flex justify-between">
-                <span>Mon - Fri:</span>
-                <span>9:00 AM - 5:00 PM</span>
+                <span>Mon - Sun:</span>
+                <span>8:30 AM - 5:00 PM</span>
               </li>
               <li className="flex justify-between">
                 <span>Wednesday & Saturday:</span>
-                <span>9:00 AM - 12:00 PM</span>
+                <span>8:30 AM - 12:00 PM</span>
               </li>
               <li className="flex justify-between">
-                <span>Sunday:</span>
-                <span>Closed</span>
+                <span>Dop Off Between:</span>
+                <span>08:30 AM - 12 PM</span>
               </li>
             </ul>
           </div>

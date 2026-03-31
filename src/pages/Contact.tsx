@@ -48,7 +48,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex gap-6">
-                    <div className="w-14 h-14 bg-earth/10 rounded-2xl flex items-center justify-center text-earth shrink-0">
+                    <div className="w-14 h-14 bg-sage/10 rounded-2xl flex items-center justify-center text-sage shrink-0">
                       <Mail size={24} />
                     </div>
                     <div>
@@ -59,7 +59,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex gap-6">
-                    <div className="w-14 h-14 bg-moss/10 rounded-2xl flex items-center justify-center text-moss shrink-0">
+                    <div className="w-14 h-14 bg-sage/10 rounded-2xl flex items-center justify-center text-sage shrink-0">
                       <MapPin size={24} />
                     </div>
                     <div>
@@ -78,16 +78,20 @@ export default function Contact() {
                 </h3>
                 <ul className="space-y-4 text-cream/80">
                   <li className="flex justify-between border-b border-cream/10 pb-2">
-                    <span>Monday - Friday</span>
-                    <span className="font-bold">9:00 AM - 5:00 PM</span>
+                    <span>Monday - Sunday</span>
+                    <span className="font-bold">8:30 AM - 5:00 PM</span>
                   </li>
                   <li className="flex justify-between border-b border-cream/10 pb-2">
                     <span>Wednesday & Saturday</span>
-                    <span className="font-bold">9:00 AM - 12:00 PM</span>
+                    <span className="font-bold">8:30 AM - 12:00 PM</span>
                   </li>
-                  <li className="flex justify-between">
+                  <li className="flex justify-between border-b border-cream/10 pb-2">
                     <span>Sunday & Public Holidays</span>
                     <span className="font-bold">Closed</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Drop Off Between</span>
+                    <span className="font-bold">08:30 AM - 12:00 PM</span>
                   </li>
                 </ul>
                 <p className="mt-8 text-sm italic text-cream/60">

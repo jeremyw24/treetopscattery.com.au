@@ -52,7 +52,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {services.map((service, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -134,7 +134,7 @@ export default function Services() {
       </section>
 
       {/* Other Pets */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-earth/10 rounded-[3rem] p-12 md:p-20 flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 space-y-6">
@@ -142,24 +142,24 @@ export default function Services() {
               <p className="text-forest/70 text-lg leading-relaxed">
                 While cats are our specialty, we also offer boarding for rabbits and guinea pigs. They receive the same high level of care and attention in a safe, comfortable environment.
               </p>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-earth text-cream px-8 py-4 rounded-full font-bold hover:bg-forest transition-all"
               >
                 Inquire About Small Pets <ArrowRight size={20} />
               </Link>
             </div>
             <div className="md:w-1/2">
-              <img 
-                src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&q=80&w=800" 
-                alt="Rabbit" 
+              <img
+                src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&q=80&w=800"
+                alt="Rabbit"
                 className="rounded-3xl shadow-xl"
                 referrerPolicy="no-referrer"
               />
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </motion.div>
   );
 }
