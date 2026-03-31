@@ -208,6 +208,18 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
+        <div className="text-center mt-12">
+          <a
+            href="https://www.google.com/search?sca_esv=47ddced43427c821&hl=en-AU&sxsrf=ANbL-n4CJ040wmo1CTm8FkYY3CuIvZOMjw:1774997354855&si=AL3DRZHrmvnFAVQPOO2Bzhf8AX9KZZ6raUI_dT7DG_z0kV2_x8A7MwhqYq-DiHMX_jRIrnD4AREd03fuTX-rxcABiQ3A-GKZkyaztfrQlDCMSPGaPyzvD8HZZqIclSCVEIn_yfOWvJ_HAEAKK4_I-s2jSyRb2NegDg%3D%3D&q=Treetops+Boarding+Cattery+Reviews&sa=X&ved=2ahUKEwjAzcC2nMuTAxVVWXADHarjK9UQ0bkNegQILRAH&biw=1287&bih=928&dpr=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-forest/70 hover:text-forest font-medium transition-colors"
+          >
+            <Star size={18} className="text-yellow-500 fill-yellow-500" />
+            Read more 5-star reviews on Google
+            <ArrowRight size={16} />
+          </a>
+        </div>
       </div>
     </section>
   );
