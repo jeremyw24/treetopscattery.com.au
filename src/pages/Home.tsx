@@ -169,6 +169,22 @@ const Testimonials = () => {
     {
       name: "Uta P",
       text: "Have been taking my cats here since I became a cat owner many years ago and wouldn't go anywhere else. I can go away secure in the knowledge that my cat is safe and well cared for."
+    },
+    {
+      name: "Karen N",
+      text: "I had my 2 cats there for 2 months whilst I relocated interstate the care they received was exceptional, sent me photo updates and very easy process of obligingly with interstate transfer process."
+    },
+    {
+      name: "M W",
+      text: "Our cat is very shy and timid, but we know he is well taken care of at Treetops. The owners are lovely, warm people who know cats well and have great boarding facilities. They were accomodating to our specific requests. We would definitely board our cat here again. "
+    },
+    {
+      name: "Jamie K",
+      text: "My cats have been there twice now, Cannot talk highly enough about treetops, alway come home healthy and settled, even though im not in the area now, id still take them there if I needed a cattery."
+    },
+    {
+      name: "Nick H",
+      text: "Such friendly and amazing hosts. Thank you Christine for looking after our cats for many years now! It feels so nice to know that our beloved furry felines are in such caring and loving hands."
     }
   ];
 
