@@ -155,7 +155,7 @@ const Footer = () => {
               </li>
               <li className="flex gap-3">
                 <Mail size={18} className="text-sage shrink-0" />
-                <span>hello@treetopscattery.com.au</span>
+                <span>bookings@treetopscattery.com.au</span>
               </li>
             </ul>
           </div>

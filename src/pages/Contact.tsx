@@ -54,7 +54,7 @@ export default function Contact() {
                     <div>
                       <h4 className="text-lg font-serif font-bold text-forest mb-1">Email Us</h4>
                       <p className="text-forest/60 mb-1">For general questions and feedback</p>
-                      <a href="mailto:hello@treetopscattery.com.au" className="text-xl font-bold text-forest hover:text-sage transition-colors">hello@treetopscattery.com.au</a>
+                      <a href="mailto:bookings@treetopscattery.com.au" className="text-xl font-bold text-forest hover:text-sage transition-colors">bookings@treetopscattery.com.au</a>
                     </div>
                   </div>
 
