@@ -1,39 +1,20 @@
-# Astro Starter Kit:
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-This is an Interior Design Website Template Built with Astro, React Js, TypeScript And Tailwind CSS.
+# Run and deploy your AI Studio app
 
-Developed with much love :), by Onwudebelu Prisca A.K.A. natural_tech_babe
+This contains everything you need to run your app locally.
 
-## 🚀 Project Structure
+View your app in AI Studio: https://ai.studio/apps/0f371673-b0b7-4413-9446-6366571d67cf
 
-Inside of My Interior Design Template Project, you'll see the following folders and files:
+## Run Locally
 
-```
-/
-├── public/
-├── src/
-│   └── icons/
-│   └── layouts/
-│   └── utils/
-│   └── components/
-|       └── button
-|       └── contact-box
-|       └── contact-form
-|       └── experience
-|       └── footer
-|       └── navbar
-|       └── quote
-│   └── pages/
-│       └── index.astro
-│       └── about.astro
-│       └── services.astro
-│       └── contact.astro
-└── package.json
+**Prerequisites:**  Node.js
 
-And other config files.
-```
 
-## GitHub Repository
-
-Feel free to check [my repo](https://github.com/PriscaTonia/interior-design-website)
-Also preview with [live link](https://interior-design-website-ntb.vercel.app/).
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
