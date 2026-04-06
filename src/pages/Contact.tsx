@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
+import Botpoison from '@botpoison/browser';
 import { motion } from 'motion/react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const botpoison = new Botpoison({ publicKey: 'pk_23c283b4-3034-48f0-bc86-1206b236df71' });
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitting(true);
+    const data = Object.fromEntries(new FormData(e.currentTarget));
+    const { solution } = await botpoison.challenge();
+    await fetch('https://submit-form.com/rMnhtyF7Q', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ ...data, _botpoison: solution }),
+    });
+    setSubmitting(false);
     setSubmitted(true);
-    // In a real app, you'd send the data to a server here
   };
 
   return (
@@ -85,10 +97,6 @@ export default function Contact() {
                     <span>Wednesday & Saturday</span>
                     <span className="font-bold">8:30 AM - 12:00 PM</span>
                   </li>
-                  <li className="flex justify-between border-b border-cream/10 pb-2">
-                    <span>Sunday & Public Holidays</span>
-                    <span className="font-bold">Closed</span>
-                  </li>
                   <li className="flex justify-between">
                     <span>Drop Off Between</span>
                     <span className="font-bold">08:30 AM - 12:00 PM</span>
@@ -132,6 +140,7 @@ export default function Contact() {
                       <input
                         required
                         type="text"
+                        name="name"
                         placeholder="John Doe"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
@@ -141,6 +150,7 @@ export default function Contact() {
                       <input
                         required
                         type="email"
+                        name="email"
                         placeholder="john@example.com"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
@@ -153,6 +163,7 @@ export default function Contact() {
                       <input
                         required
                         type="tel"
+                        name="phone"
                         placeholder="(03) 1234 5678"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
@@ -162,6 +173,7 @@ export default function Contact() {
                       <input
                         required
                         type="text"
+                        name="cat_name"
                         placeholder="Whiskers"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
@@ -174,6 +186,7 @@ export default function Contact() {
                       <input
                         required
                         type="date"
+                        name="checkin_date"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
                     </div>
@@ -182,8 +195,55 @@ export default function Contact() {
                       <input
                         required
                         type="date"
+                        name="checkout_date"
                         className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all"
                       />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">
+                      Accommodation Preference <span className="text-forest/40 normal-case font-normal">(optional)</span>
+                    </label>
+                    <div className="flex gap-6">
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          name="accommodation"
+                          value="inside"
+                          className="w-5 h-5 rounded accent-sage cursor-pointer"
+                        />
+                        <span className="text-forest/80 font-medium">Inside</span>
+                      </label>
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          name="accommodation"
+                          value="outside"
+                          className="w-5 h-5 rounded accent-sage cursor-pointer"
+                        />
+                        <span className="text-forest/80 font-medium">Outside</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">
+                      Current Vaccinations <span className="text-red-400">*</span>
+                    </label>
+                    <div className="flex gap-6">
+                      {['Yes', 'No', 'Not Sure'].map((option) => (
+                        <label key={option} className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            required
+                            type="radio"
+                            name="vaccinations"
+                            value={option.toLowerCase().replace(' ', '-')}
+                            className="w-5 h-5 accent-sage cursor-pointer"
+                          />
+                          <span className="text-forest/80 font-medium">{option}</span>
+                        </label>
+                      ))}
                     </div>
                   </div>
 
@@ -191,6 +251,7 @@ export default function Contact() {
                     <label className="text-sm font-bold text-forest/70 uppercase tracking-wider">Message / Special Requirements</label>
                     <textarea
                       rows={4}
+                      name="message"
                       placeholder="Tell us about your cat's needs..."
                       className="w-full px-6 py-4 bg-cream rounded-2xl border border-sage/10 focus:outline-none focus:ring-2 focus:ring-sage/50 transition-all resize-none"
                     ></textarea>
@@ -198,9 +259,10 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-forest text-cream py-5 rounded-2xl font-bold text-lg hover:bg-sage transition-all shadow-lg flex items-center justify-center gap-2"
+                    disabled={submitting}
+                    className="w-full bg-forest text-cream py-5 rounded-2xl font-bold text-lg hover:bg-sage transition-all shadow-lg flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Send Inquiry <Send size={20} />
+                    {submitting ? 'Sending...' : <><span>Send Inquiry</span> <Send size={20} /></>}
                   </button>
                 </form>
               )}
