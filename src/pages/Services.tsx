@@ -26,7 +26,7 @@ export default function Services() {
       icon: <Pill size={32} />,
       title: "Unique Requirements",
       description: "Whether it be daily grooming, or a regimented medication schedule for your cats, Treetops has you covered.",
-      features: ["Medication administration", "Daily grooming", "Post-surgery care", "Diabetic care & injections"]
+      features: ["Medication administration", "Daily grooming", "Post-surgery care"]
     }
   ];
 
